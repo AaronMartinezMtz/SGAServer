@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  db:
+    image: mysql
+    container_name: SGA
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: IsraelMtz
+      MYSQL_DATABASE: SGA_DB
+      MYSQL_USER: Israel
+      MYSQL_PASSWORD: IsraelMtz
+    ports:
+      - 3306:3306
+    volumes:
+      - ./db/:/docker-entrypoint-initdb.d/
