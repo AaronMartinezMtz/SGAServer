@@ -10,6 +10,19 @@ CREATE TABLE Usuarios (
     PRIMARY KEY (userName)
 );
 
-
-
 INSERT INTO Usuarios VALUES ("JosueMTZ", "JOSUE AARON", "MARTINEZ MARTINEZ", "JO122ZZ");
+
+CREATE TABLE Citas (
+    id  int (11) AUTO_INCREMENT,
+    fecha VARCHAR(20) NOT NULL,
+    hora VARCHAR(45) DEFAULT NULL,
+    duracion VARCHAR(45) DEFAULT NULL,
+    paciente VARCHAR(45) DEFAULT NULL,
+    PRIMARY KEY (id)
+);
+
+
+
+INSERT INTO Citas VALUES ("05/10/2023", "10:00", "2 horas" , "Josue Martinez");
+
+SELECT *  FROM Citas WHERE fecha = "05/10/2023" and hora = "10:00";
